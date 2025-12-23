@@ -1,0 +1,31 @@
+.container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: #313131;
+
+}
+.container h3{
+  color: #fff;
+  font-size: 3rem;
+}
+.container div{
+  display: flex ;
+  gap: 20px;
+}
+
+.increase{
+  padding: 20px 20px;
+  background: aqua;
+  font-size: 5rem;
+  border: none;
+  outline: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}

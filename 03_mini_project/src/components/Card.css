@@ -1,0 +1,110 @@
+.card{
+    height: 340px;
+    width: 300px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top img{
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: 1px solid #dadada;
+}
+
+.top button{
+    display: flex;
+    align-items: center;
+    border: 1px solid #dadada;
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 3px 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    gap: 3px;
+    background: transparent;
+    color: #b1b1b1;
+}
+.center {
+    display: flex;
+    flex-direction: column;
+    
+}
+.center h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+.center h3 span{
+    font-size: 10px;
+    font-weight: 800;
+    color:#8b8b8b;
+
+}
+.center h2{
+    font-size: 20px;
+    font-weight: 750;
+        margin-bottom: .2rem;
+
+}
+.center .tag{
+    display: flex;
+        margin-left: .3rem;
+    gap: 5px;
+}
+.center .tag h4{
+    font-size: 12px;
+    background: #dadada;
+    color: #111;
+    padding: 3px 6px;
+    font-weight: 600;
+
+}
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #c8c3c3;
+
+}
+.bottom div h3{
+ font-weight: 700;
+ font-size: 20px;
+}
+.bottom div p{
+    font-weight: 300;
+    font-size: 13px;
+}
+.bottom button{
+    background: #000;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    column-width: 600;
+}
