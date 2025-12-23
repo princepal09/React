@@ -39,7 +39,7 @@ const AppContextProvider = ({children}) => {
     setLoading(false);  
   }
 
-  function handlePageChange(){
+  function handlePageChange(page){
     setPage(page);
     fetchApi(page);
   }
