@@ -3,7 +3,7 @@ import { ThemeContext } from './context/ThemeContext'
 
 const App = () => {
 
-  const{theme,handleToggleButton} = useContext(ThemeContext);
+  const{theme,handleToggleButton} = useContext(ThemeContext); 
   
 
 
