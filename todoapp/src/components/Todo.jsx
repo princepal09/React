@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TodoItem from "./TodoItem";
 import DateTime from "./DateTime";
 import Form from "./Form";
+import { getLocalStorage, setLocalStorage} from "./localStorage";
 
 const Todo = () => {
   const [formData, setFormData] = useState({});
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState( () => getLocalStorage() );
 
   const changeHandler = (e) => {
     const { value } = e.target;
@@ -37,6 +38,12 @@ const Todo = () => {
   const clearAllHandle = () => {
     setTasks([]);
   };
+
+
+  // Add Data to local Storage 
+   useEffect( ()=>{
+    setLocalStorage(tasks);
+   },[tasks])
 
   return (
     <div className="mt-20 text-white">
