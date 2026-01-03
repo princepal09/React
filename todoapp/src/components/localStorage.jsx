@@ -8,7 +8,11 @@ export const setLocalStorage = (value) =>{
 
 export const getLocalStorage = () =>{
     const getVal = localStorage.getItem(key);
+
+    // getVal ? [] : JSON.parse(getVal);
     if(!getVal) return[];
     return JSON.parse(getVal)
+
+    
 
 }
