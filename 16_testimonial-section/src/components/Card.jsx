@@ -4,7 +4,7 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
 
 const Card = ({ data }) => {
-  
+
   return (
     <div className="flex mt-4 flex-col md:relative">
       <div className="absolute -top-28 z-10 mx-auto">
@@ -29,13 +29,13 @@ const Card = ({ data }) => {
         <FaQuoteLeft />
       </div>
 
-      <div className="text-center mx-auto mt-5 text-slate-500 ">{data.text.length > 200 ? data.text.slice(0,150) : data.text}....</div>
+      <div className="text-center mx-auto mt-5 text-slate-500 ">{data.text.length > 200 ? data.text.slice(0, 150) : data.text}....</div>
 
       <div className="text-center text-violet-400 mx-auto mt-5">
         <FaQuoteRight />
       </div>
 
-      
+
     </div>
   );
 };

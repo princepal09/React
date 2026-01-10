@@ -2,9 +2,8 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
-            <h1>About</h1>
-
+       <div className='text-8xl mt-2 text-white flex justify-center items-center'>
+      About
     </div>
   )
 }

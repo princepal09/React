@@ -6,6 +6,7 @@ const reviews = [
     image: "https://img.indiaforums.com/person/480x360/0/2164-atif-aslam.webp?c=7vP7E1",
     text: "I have had the pleasure of working with this team on several projects, and I am consistently impressed with their technical expertise and ability to deliver quality solutions on time and within budget. They are a true partner and an asset to any project.",
   },
+  
   {
     id: 2,
     name: "Abir Pal",
