@@ -1,6 +1,6 @@
 import React from 'react'
 import Chance from 'chance'
-import { createUser } from '../redux/slices/userSlice';
+import { createUser, deleteAllUser } from '../redux/slices/userSlice';
 import { useDispatch } from 'react-redux';
 import Name from './Name';
 
@@ -15,12 +15,18 @@ const UserDetails = () => {
 
 
     return (
-        <div className='max-w-max w-11/12 p-10 mx-auto'>
+        <div className='max-w-max flex flex-col w-11/12 p-10 mx-auto'>
             <div className='flex items-center w-full gap-20 text-2xl justify-between'>
                 <h1>List of User Details</h1>
                 <button onClick={addUser} className='bg-blue-500 cursor-pointer px-3 py-2 rounded-md'>Add new users</button>
             </div>
             <Name />
+
+            <div className="flex justify-end mt-10">
+                <button onClick={() => dispatch(deleteAllUser())} className="bg-orange-400 cursor-pointer px-4 py-2 rounded text-white">
+                    Clear All Users
+                </button>
+            </div>
         </div>
     )
 }
