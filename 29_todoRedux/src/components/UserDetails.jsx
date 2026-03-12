@@ -1,14 +1,13 @@
 import React from 'react'
 import Chance from 'chance'
 import { createUser } from '../redux/slices/userSlice';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Name from './Name';
 
 const UserDetails = () => {
     const chance = Chance();
 
     const dispatch = useDispatch();
-    const users = useSelector((state) => state.user);
 
     const addUser = () => {
         dispatch(createUser(chance.name()));
