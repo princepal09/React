@@ -1,4 +1,4 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
 export const fetchUsers = createAsyncThunk(
@@ -16,3 +16,30 @@ export const fetchUsers = createAsyncThunk(
     }
 )
 
+const initialState = {
+    users : [],
+    loading : false,
+    error : null
+}
+
+export const dataSlice = createSlice({
+    name : "users",
+    initialState,
+
+    extraReducers : (builder) => {
+        builder
+        .addCase(fetchUsers.pending, (state) =>{
+          state.loading = true;
+        }) 
+        .addCase(fetchUsers.fulfilled, (state, action) =>{
+            state.loading = true;
+            state.users = action.payload;
+        })
+        .addCase(fetchUsers.rejected, (state, action) =>{
+             state.loading = false;
+             state.users = action.error.message;
+
+        })
+
+    }
+})
