@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 
 const App = () => {
-  const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm();
+  // const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm( );
+  const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm( {mode: "onChange"});
+  
   const [loading, setLoading] = useState(false)
   const submitOnHandler = async (data) => {
     try {
