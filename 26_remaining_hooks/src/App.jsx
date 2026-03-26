@@ -1,11 +1,12 @@
 import React from 'react'
 import UseReducer from './hooks/UseReducer'
 import ReactMemo from './hooks/ReactMemo'
+import UseRef from './hooks/UseRef'
 
 const App = () => {
   return (
-    <div>
-      <ReactMemo/>
+    <div className='container' >
+      <UseRef/>
     </div>
   )
 }
