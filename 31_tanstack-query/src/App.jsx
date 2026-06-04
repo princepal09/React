@@ -13,6 +13,8 @@ import Services from "./pages/Services";
 import Home from "./pages/Home";
 import ErrorPage from "./pages/ErrorPage";
 import NotFound from "./pages/NotFound";
+import Github from "./pages/Github";
+import { getProfileData } from "./utils/services";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +25,7 @@ export const router = createBrowserRouter(
       <Route path="contact/:contactId" element={<Contact />} />
       <Route path="about" element={<About />} />
       <Route path="services" element={<Services />} />
+      <Route loader = {getProfileData} path="github/:username" element={<Github />} />
     </Route>
 
     <Route   path="*" element={<NotFound />}/>

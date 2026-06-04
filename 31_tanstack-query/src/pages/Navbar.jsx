@@ -2,6 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+    
+    const username = 'princepal09'
+
   return (
     <nav className="bg-gray-900 text-white shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -30,6 +33,11 @@ const Navbar = () => {
           <li>
             <NavLink to={'/contact/100'}className  = {({isActive}) => `hover:text-blue-400 transition ${isActive && 'text-blue-400'}` }>
               Contact
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to={`/github/${username}`}className  = {({isActive}) => `hover:text-blue-400 transition ${isActive && 'text-blue-400'}` }>
+              Github
             </NavLink>
           </li>
         </ul>
