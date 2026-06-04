@@ -6,6 +6,8 @@ const Github = () => {
   const data = useLoaderData();
   console.log(data);
 
+
+
   return (
     <div style={{ maxWidth: "600px", margin: "40px auto" }}>
       <img
