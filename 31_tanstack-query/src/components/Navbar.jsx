@@ -40,6 +40,11 @@ const Navbar = () => {
               Github
             </NavLink>
           </li>
+          <li>
+            <NavLink to={`/todo`}className  = {({isActive}) => `hover:text-blue-400 transition ${isActive && 'text-blue-400'}` }>
+              Todo List
+            </NavLink>
+          </li>
         </ul>
 
         {/* Button */}
