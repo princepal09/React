@@ -29,10 +29,27 @@ export const todoSlice = createSlice({
                 "todo",
                 JSON.stringify(state.todos)
             );
+        },
+
+        updateTodo : (state, action) =>{
+            const {_id, text} = action.payload
+            const existingTodo = state.todos.find((todo) => todo._id === _id )
+            console.log(existingTodo)
+            if(existingTodo){
+                existingTodo.text = text
+            }
+            localStorage.setItem('todo',JSON.stringify(state.todos))
+
+            
+        },
+        removeAll : (state, action) =>{
+            state.todos = []
+            localStorage.removeItem('todo');
+
         }
 
     }
 })
 
-export const { addTodo, removeTodo } = todoSlice.actions;
+export const { addTodo, removeTodo, updateTodo, removeAll} = todoSlice.actions;
 export default todoSlice.reducer;
