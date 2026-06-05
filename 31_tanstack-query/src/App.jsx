@@ -16,6 +16,7 @@ import NotFound from "./pages/NotFound";
 import Github from "./pages/Github";
 import { getProfileData } from "./utils/services";
 import TodoList from "./pages/TodoList";
+import PostData from "./pages/PostData";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ export const router = createBrowserRouter(
       <Route path="services" element={<Services />} />
       <Route path="todo" element={<TodoList />} />
       <Route loader = {getProfileData} path="github/:username" element={<Github />} />
+      <Route path="about/:id" element={<PostData />} />
     </Route>
 
     <Route   path="*" element={<NotFound />}/>
